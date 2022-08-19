@@ -19,6 +19,7 @@
         --spacing-base: 10px;
         --spacing-lg: 15px;
         --shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
+        --deep-shadow: rgb(0 0 0 / 30%) 0px 3px 3px -2px, rgb(0 0 0 / 30%) 0px 3px 4px 0px, rgb(0 0 0 / 35%) 0px 1px 8px;
         --transition: 0.1s ease;
       }
       ::-webkit-scrollbar {
@@ -107,6 +108,9 @@
       .column {
         flex-direction: column;
       }
+      .wrap {
+        flex-wrap: wrap;
+      }
       .flex-centered {
         display: flex;
         justify-content: center;
@@ -181,10 +185,12 @@
         opacity: 1;
       }
       tags {
-        margin: var(--spacing-lg) 0;
+        margin: var(--spacing-sm) 0;
       }
       tag {
         padding: var(--spacing-sm);
+        margin: var(--spacing-sm);
+        margin-left: unset;
         background: var(--grey);
         font-size: var(--sm-font);
         font-weight: bold;
@@ -199,8 +205,15 @@
           width: calc(100% - 50px);
           left: 25px;
         }
-        .gif {
-          display: none;
+        entry {
+          flex-direction: column;
+        }
+        entry .gif {
+          position: relative;
+          right: unset;
+          margin: var(--spacing-sm) 0 var(--spacing-base) 0;
+          width: 100%;
+          height: auto;
         }
       }
     </style>
@@ -258,7 +271,7 @@
       <span>
         Considering the end goal of decentralization, we want to ensure the development of the protocol and interface well into the future. This has lead us to create a TypeScript library for easy integration with and use of our on-chain programs, along with a stylesheet package to perpetuate our unique designs.
       </span>
-      <tags>
+      <tags class="flex align-start justify-start wrap">
         <tag>Solana / Blockchain</tag>
         <tag>web3.js</tag>
         <tag>React / Native</tag>
