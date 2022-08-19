@@ -18,6 +18,7 @@
         --spacing-sm: 5px;
         --spacing-base: 10px;
         --spacing-lg: 15px;
+        --shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
         --transition: 0.1s ease;
       }
       ::-webkit-scrollbar {
@@ -65,6 +66,7 @@
       }
       .semi-bold {
         font-weight: 500;
+        opacity: 0.85;
       }
       .bold {
         font-weight: bold;
@@ -132,12 +134,12 @@
       }
       btn:hover, btn.active {
         opacity: 1;
-        box-shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
+        box-shadow:  var(--shadow);
       }
       btn:active {
         margin-top: 0;
         opacity: 1;
-        box-shadow: rgb(0 0 0 / 10%) 0px 2px 2px -1px, rgb(0 0 0 / 10%) 0px 2px 3px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
+        box-shadow: var(--shadow)
       }
       entry {
         display: none;
@@ -159,15 +161,14 @@
         border-radius: 50px;
         margin-left: var(--spacing-sm);
       }
-      entry .ui-gif {
-        height: 300px;
+      entry .gif {
+        height: 250px;
         width: auto;
         position: absolute;
-        top: 42%;
-        right: -500px;
-        transform: translateY(-50%);
+        top: 0;
+        right: -425px;
         border-radius: 4px;
-        box-shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 30%) 0px 3px 4px 0px, rgb(0 0 0 / 32%) 0px 1px 8px;
+        box-shadow: var(--shadow)
       }
       entry a {
         opacity: 0.7;
@@ -198,7 +199,7 @@
           width: calc(100% - 50px);
           left: 25px;
         }
-        .ui-gif {
+        .gif {
           display: none;
         }
       }
@@ -230,7 +231,7 @@
       <h1>a web3 dev</h1>
       <div class="flex-centered">
         <btn class="active">about</btn>
-        <btn>work</btn>
+        <btn>currently</btn>
       </div>
     </section>
     <entry>
@@ -239,6 +240,8 @@
       <span>
         After my van broke down for the fourth time in a row (being a musician just wasn’t paying that well, go figure) I decided to teach myself to code. Three short years later, I'm developing the future of finance on the blockchain at Jet Protocol and creating one of the most interesting and well designed UI's in the space.
       </span>
+      <img class="gif" src="./assets/otters.gif" alt="Jet UI animated gif" />
+      <br>
       <div>&rarr; <a href="mailto:logan.ross@aol.com">logan.ross@aol.com</a></div>
       <div>&rarr; <a href="https://www.linkedin.com/in/loganjohnross/">linkedin</a></div>
       <div>&rarr; <a href="https://github.com/loganjross">github</a></div>
@@ -250,10 +253,10 @@
       </div>
       <h3 class="semi-bold">A DeFi protocol built on the Solana blockchain.</h3>
       <span>
-        As the first employee of Jet, I was tasked with creating our user interface. I wanted the product to match our mission within DeFi as a whole—to disrupt the status quo. We've created something superior and truly revolutionary within the space.
+        As the first employee of Jet, I was tasked with creating our user interface. I wanted the product to match our mission within DeFi as a whole—to disrupt the status quo. We've created something not only unique, but also powerful and intuitive to use.
       </span>
       <span>
-        Considering the end goal of decentralization, we wanted to leave the community with an easy way continue development on the protocol and interface. This lead us to creating a TypeScript library for easy integration with and use of our on-chain programs, and a stylesheet package to perpetuate our unique neumorphic design.
+        Considering the end goal of decentralization, we want to ensure the development of the protocol and interface well into the future. This has lead us to create a TypeScript library for easy integration with and use of our on-chain programs, along with a stylesheet package to perpetuate our unique designs.
       </span>
       <tags>
         <tag>Solana / Blockchain</tag>
@@ -261,9 +264,9 @@
         <tag>React / Native</tag>
         <tag>Svelte</tag>
         <tag>TypeScript</tag>
-        <tag>Less</tag>
+        <tag>Less / CSS</tag>
       </tags>
-      <img class="ui-gif" src="./assets/jet-ui.gif" alt="Jet UI animated gif" />
+      <img class="gif" src="./assets/jet-ui.gif" alt="Jet UI animated gif" />
       <div>
         &rarr;
         <a href="https://www.jetprotocol.io/" target="_blank" rel="noopener noreferrer">
@@ -275,6 +278,7 @@
         <a href="https://github.com/jet-lab/jet-ui" target="_blank" rel="noopener noreferrer">
           Jet UI
         </a>
+        &nbsp;(currently private)
       </div>
       <div>
         &rarr;
