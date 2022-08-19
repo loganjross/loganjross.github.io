@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Ross | Dev</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+      :root {
+        --white: #F1F1F1;
+        --grey: rgba(0, 0, 0, 0.08);
+        --black: #2E3033;
+        --black-2: #46484b;
+        --sm-font: 12px;
+        --base-font: 14px;
+        --lg-font: 18px;
+        --spacing-sm: 5px;
+        --spacing-base: 10px;
+        --spacing-lg: 15px;
+        --transition: 0.1s ease;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        position: relative;
+        margin: 0;
+        background: var(--white);
+        color: var(--black);
+        overflow-x: hidden;
+        font-size: var(--base-font);
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: 0.25px;
+        width: 100vw;
+        min-height: 100vh;
+      }
+      h1, h2, h3, p, span, a {
+        margin: var(--spacing-sm) 0;
+      }
+      h1 {
+        font-size: 80px;
+        line-height: 80px;
+      }
+      h3 {
+        margin: var(--spacing-lg) 0;
+        font-size: var(--lg-font);
+      }
+      span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 100;
+        line-height: 24px;
+      }
+      a {
+        color: darkblue;
+      }
+      section {
+        position: absolute;
+        top: 5px;
+        left: 50px;
+        width: calc(100% - 100px);
+        max-width: 600px;
+        height: 175px;
+        border-bottom: 2px dotted var(--black-2);
+      }
+      .semi-bold {
+        font-weight: 500;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .flex {
+        display: flex;
+      }
+      .justify-start {
+        justify-content: flex-start;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .justify-evenly {
+        justify-content: space-evenly;
+      }
+      .align-start {
+        align-items: flex-start;
+      }
+      .align-center {
+        align-items: center;
+      }
+      .align-end {
+        align-items: flex-end;
+      }
+      .align-between {
+        align-items: space-between;
+      }
+      .align-evenly {
+        align-items: space-evenly;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .flex-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .name {
+        font-size: var(--lg-font);
+        margin-bottom: -15px;
+      }
+      btns {
+        height: 40px;
+        margin: var(--spacing-sm) 0;
+      }
+      btn {
+        cursor: pointer;
+        background: var(--black-2);
+        color: var(--white);
+        font-size: var(--lg-font);
+        font-weight: 500;
+        padding: calc(var(--spacing-sm) - 2px) var(--spacing-lg) var(--spacing-sm) var(--spacing-lg);
+        margin: var(--spacing-sm);
+        border-radius: 50px;
+        opacity: 0.8;
+        transition: all var(--transition);
+      }
+      btn:hover, btn.active {
+        opacity: 1;
+        box-shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
+      }
+      btn:active {
+        margin-top: 0;
+        opacity: 1;
+        box-shadow: rgb(0 0 0 / 10%) 0px 2px 2px -1px, rgb(0 0 0 / 10%) 0px 2px 3px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
+      }
+      entry {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 180px;
+        left: 50px;
+        width: calc(100% - 100px);
+        max-width: 600px;
+        margin-top: var(--spacing-lg);
+        padding: var(--spacing-sm) 0 25px 0;
+      }
+      entry:first-of-type {
+        display: flex;
+      }
+      entry img {
+        width: 22px;
+        height: 22px;
+        border-radius: 50px;
+        margin-left: var(--spacing-sm);
+      }
+      entry .ui-gif {
+        height: 300px;
+        width: auto;
+        position: absolute;
+        top: 42%;
+        right: -500px;
+        transform: translateY(-50%);
+        border-radius: 4px;
+        box-shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 30%) 0px 3px 4px 0px, rgb(0 0 0 / 32%) 0px 1px 8px;
+      }
+      entry a {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      entry i {
+        margin: var(--spacing-base) var(--spacing-sm) 0 0;
+      }
+      entry a:hover {
+        opacity: 1;
+      }
+      tags {
+        margin: var(--spacing-lg) 0;
+      }
+      tag {
+        padding: var(--spacing-sm);
+        background: var(--grey);
+        font-size: var(--sm-font);
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 675px) {
+        h1 {
+          font-size: 50px;
+          line-height: 50px;
+        }
+        section, entry {
+          width: calc(100% - 50px);
+          left: 25px;
+        }
+        .ui-gif {
+          display: none;
+        }
+      }
+    </style>
+    <script>
+      window.addEventListener('load', () => {
+        const entries = document.querySelectorAll('entry');
+        const btns = document.querySelectorAll('btn');
+        btns.forEach((btn, i) => {
+          btn.addEventListener('click', () => {
+            btns.forEach(btn => btn.classList.remove('active'));
+            btn.classList.add('active');
+            entries.forEach((entry, x) => entry.style.display = i === x ? 'flex' : 'none');
+          });
+        });
+
+        const BIRTH_TIMESTAMP = 757897255;
+        const BIRTH_YEAR = 1994;
+        const ageMs = Date.now() - BIRTH_TIMESTAMP;
+        const ageDate = new Date(ageMs);
+        const age = Math.abs(ageDate.getUTCFullYear() - BIRTH_YEAR);
+        document.querySelector('.age').innerHTML = `${age} year old musician and programmer`;
+      });
+    </script>
+  </head>
+  <body>
+    <section class="flex align-start justify-center column">
+      <span class="name semi-bold">logan ross</span>
+      <h1>a web3 dev</h1>
+      <div class="flex-centered">
+        <btn class="active">about</btn>
+        <btn>work</btn>
+      </div>
+    </section>
+    <entry>
+      <h2 class="age">28 year old musician and programmer</h2>
+      <h3 class="semi-bold">buffalo / brooklyn, ny</h3>
+      <span>
+        After my van broke down for the fourth time in a row (being a musician just wasn’t paying that well, go figure) I decided to teach myself to code. Three short years later, I'm developing the future of finance on the blockchain at Jet Protocol and creating one of the most interesting and well designed UI's in the space.
+      </span>
+      <div>&rarr; <a href="mailto:logan.ross@aol.com">logan.ross@aol.com</a></div>
+      <div>&rarr; <a href="https://www.linkedin.com/in/loganjohnross/">linkedin</a></div>
+      <div>&rarr; <a href="https://github.com/loganjross">github</a></div>
+    </entry>
+    <entry>
+      <div class="flex align-center justify-start">
+        <h2>Jet Protocol</h2>
+        <img src="https://pbs.twimg.com/profile_images/1457722135535890441/QvJgVko3_400x400.jpg" alt="Jet Logo">
+      </div>
+      <h3 class="semi-bold">A DeFi protocol built on the Solana blockchain.</h3>
+      <span>
+        As the first employee of Jet, I was tasked with creating our user interface. I wanted the product to match our mission within DeFi as a whole—to disrupt the status quo. We've created something superior and truly revolutionary within the space.
+      </span>
+      <span>
+        Considering the end goal of decentralization, we wanted to leave the community with an easy way continue development on the protocol and interface. This lead us to creating a TypeScript library for easy integration with and use of our on-chain programs, and a stylesheet package to perpetuate our unique neumorphic design.
+      </span>
+      <tags>
+        <tag>Solana / Blockchain</tag>
+        <tag>web3.js</tag>
+        <tag>React / Native</tag>
+        <tag>Svelte</tag>
+        <tag>TypeScript</tag>
+        <tag>Less</tag>
+      </tags>
+      <img class="ui-gif" src="./assets/jet-ui.gif" alt="Jet UI animated gif" />
+      <div>
+        &rarr;
+        <a href="https://www.jetprotocol.io/" target="_blank" rel="noopener noreferrer">
+          Website
+        </a>
+      </div>
+      <div>
+        &rarr;
+        <a href="https://github.com/jet-lab/jet-ui" target="_blank" rel="noopener noreferrer">
+          Jet UI
+        </a>
+      </div>
+      <div>
+        &rarr;
+        <a href="https://github.com/jet-lab/jet-v2" target="_blank" rel="noopener noreferrer">
+          Jet TS Client Library
+        </a>
+      </div>
+      <div>
+        &rarr;
+        <a href="https://www.npmjs.com/package/@jet-lab/jet-antd" target="_blank" rel="noopener noreferrer">
+          Jet-Antd Styling Library
+        </a>
+      </div>
+    </entry>
+  </body>
+</html>
