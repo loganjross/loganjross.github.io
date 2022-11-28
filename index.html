@@ -8,20 +8,17 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
       :root {
-        --white: #f1f1f1;
-        --grey: rgba(0, 0, 0, 0.08);
+        --white: #e4e4e4;
+        --grey: rgba(0, 0, 0, 0.1);
         --black: #2e3033;
         --black-2: #46484b;
         --sm-font: 12px;
         --base-font: 14px;
-        --lg-font: 18px;
+        --lg-font: 16px;
         --spacing-sm: 5px;
         --spacing-base: 10px;
         --spacing-lg: 15px;
-        --shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px,
-          rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
-        --deep-shadow: rgb(0 0 0 / 30%) 0px 3px 3px -2px,
-          rgb(0 0 0 / 30%) 0px 3px 4px 0px, rgb(0 0 0 / 35%) 0px 1px 8px;
+        --shadow: 0px 7px 30px -15px rgba(0, 0, 0, 14);
         --transition: 0.1s ease;
       }
       ::-webkit-scrollbar {
@@ -70,7 +67,7 @@
         width: calc(100% - 100px);
         max-width: 600px;
         height: 175px;
-        border-bottom: 2px dotted var(--black-2);
+        border-bottom: 1px solid var(--grey);
       }
       .semi-bold {
         font-weight: 500;
@@ -133,12 +130,11 @@
       }
       btn {
         cursor: pointer;
-        background: var(--black-2);
+        background: var(--black);
         color: var(--white);
         font-size: var(--lg-font);
         font-weight: 500;
-        padding: calc(var(--spacing-sm) - 2px) var(--spacing-lg)
-          var(--spacing-sm) var(--spacing-lg);
+        padding: var(--spacing-sm) var(--spacing-lg);
         margin: var(--spacing-sm);
         border-radius: 50px;
         opacity: 0.8;
@@ -150,7 +146,8 @@
         box-shadow: var(--shadow);
       }
       btn:active {
-        margin-top: 0;
+        margin-top: calc(var(--spacing-sm) + 1px);
+        margin-bottom: calc(var(--spacing-sm) - 1px);
         opacity: 1;
         box-shadow: var(--shadow);
       }
@@ -169,18 +166,18 @@
         display: flex;
       }
       entry img {
-        width: 22px;
-        height: 22px;
-        border-radius: 4px;
+        width: 25px;
+        height: 25px;
+        border-radius: 6px;
         margin-left: var(--spacing-sm);
       }
       entry .gif {
-        height: 300px;
+        height: 350px;
         width: auto;
         position: absolute;
         top: 0;
-        right: -480px;
-        border-radius: 4px;
+        right: -575px;
+        border-radius: 6px;
         box-shadow: var(--shadow);
       }
       entry .link {
@@ -200,10 +197,11 @@
         margin: var(--spacing-sm) 0;
       }
       tag {
-        padding: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-base);
         margin: var(--spacing-sm);
         margin-left: unset;
         background: var(--grey);
+        border-radius: 6px;
         font-size: var(--sm-font);
         font-weight: bold;
       }
