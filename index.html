@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logan Ross | Dev</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
       :root {
-        --white: #F1F1F1;
+        --white: #f1f1f1;
         --grey: rgba(0, 0, 0, 0.08);
-        --black: #2E3033;
+        --black: #2e3033;
         --black-2: #46484b;
         --sm-font: 12px;
         --base-font: 14px;
@@ -18,8 +18,10 @@
         --spacing-sm: 5px;
         --spacing-base: 10px;
         --spacing-lg: 15px;
-        --shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px, rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
-        --deep-shadow: rgb(0 0 0 / 30%) 0px 3px 3px -2px, rgb(0 0 0 / 30%) 0px 3px 4px 0px, rgb(0 0 0 / 35%) 0px 1px 8px;
+        --shadow: rgb(0 0 0 / 10%) 0px 3px 3px -2px,
+          rgb(0 0 0 / 10%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px;
+        --deep-shadow: rgb(0 0 0 / 30%) 0px 3px 3px -2px,
+          rgb(0 0 0 / 30%) 0px 3px 4px 0px, rgb(0 0 0 / 35%) 0px 1px 8px;
         --transition: 0.1s ease;
       }
       ::-webkit-scrollbar {
@@ -32,12 +34,17 @@
         color: var(--black);
         overflow-x: hidden;
         font-size: var(--base-font);
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         letter-spacing: 0.25px;
         width: 100vw;
         min-height: 100vh;
       }
-      h1, h2, h3, p, span, a {
+      h1,
+      h2,
+      h3,
+      p,
+      span,
+      a {
         margin: var(--spacing-sm) 0;
       }
       h1 {
@@ -130,20 +137,22 @@
         color: var(--white);
         font-size: var(--lg-font);
         font-weight: 500;
-        padding: calc(var(--spacing-sm) - 2px) var(--spacing-lg) var(--spacing-sm) var(--spacing-lg);
+        padding: calc(var(--spacing-sm) - 2px) var(--spacing-lg)
+          var(--spacing-sm) var(--spacing-lg);
         margin: var(--spacing-sm);
         border-radius: 50px;
         opacity: 0.8;
         transition: all var(--transition);
       }
-      btn:hover, btn.active {
+      btn:hover,
+      btn.active {
         opacity: 1;
-        box-shadow:  var(--shadow);
+        box-shadow: var(--shadow);
       }
       btn:active {
         margin-top: 0;
         opacity: 1;
-        box-shadow: var(--shadow)
+        box-shadow: var(--shadow);
       }
       entry {
         display: none;
@@ -162,17 +171,17 @@
       entry img {
         width: 22px;
         height: 22px;
-        border-radius: 50px;
+        border-radius: 4px;
         margin-left: var(--spacing-sm);
       }
       entry .gif {
-        height: 275px;
+        height: 300px;
         width: auto;
         position: absolute;
         top: 0;
         right: -480px;
         border-radius: 4px;
-        box-shadow: var(--shadow)
+        box-shadow: var(--shadow);
       }
       entry .link {
         margin: 2px 0;
@@ -204,7 +213,8 @@
           font-size: 50px;
           line-height: 50px;
         }
-        section, entry {
+        section,
+        entry {
           width: calc(100% - 50px);
           left: 25px;
         }
@@ -221,14 +231,16 @@
       }
     </style>
     <script>
-      window.addEventListener('load', () => {
-        const entries = document.querySelectorAll('entry');
-        const btns = document.querySelectorAll('btn');
+      window.addEventListener("load", () => {
+        const entries = document.querySelectorAll("entry");
+        const btns = document.querySelectorAll("btn");
         btns.forEach((btn, i) => {
-          btn.addEventListener('click', () => {
-            btns.forEach(btn => btn.classList.remove('active'));
-            btn.classList.add('active');
-            entries.forEach((entry, x) => entry.style.display = i === x ? 'flex' : 'none');
+          btn.addEventListener("click", () => {
+            btns.forEach((btn) => btn.classList.remove("active"));
+            btn.classList.add("active");
+            entries.forEach(
+              (entry, x) => (entry.style.display = i === x ? "flex" : "none")
+            );
           });
         });
 
@@ -237,7 +249,9 @@
         const ageMs = Date.now() - BIRTH_TIMESTAMP;
         const ageDate = new Date(ageMs);
         const age = Math.abs(ageDate.getUTCFullYear() - BIRTH_YEAR);
-        document.querySelector('.age').innerHTML = `${age} year old musician and programmer`;
+        document.querySelector(
+          ".age"
+        ).innerHTML = `${age} year old musician and programmer`;
       });
     </script>
   </head>
@@ -247,63 +261,233 @@
       <h1>a web3 dev</h1>
       <div class="flex-centered">
         <btn class="active">about</btn>
-        <btn>currently</btn>
+        <btn>Slide</btn>
+        <btn>many.exchange</btn>
+        <btn>Jet Protocol</btn>
       </div>
     </section>
     <entry>
       <h2 class="age">28 year old musician and programmer</h2>
       <h3 class="semi-bold">buffalo / brooklyn, ny</h3>
       <span>
-        After my van broke down for the fourth time in a row (being a musician just wasn’t paying
-        that well, go figure), I decided to teach myself to code. Three short years later, I'm lead
-        front-end engineer at Jet Protocol, developing the future of finance on the blockchain
-        and creating one of the best UIs in the space.
+        After my van broke down for the fourth time in a row (being a musician
+        just wasn't paying that well, go figure), I decided to teach myself to
+        code. Two years later I became deeply interested in the blockchain and
+        DeFi space, learning everything I could and becoming a high level web3
+        developer.
       </span>
       <img class="gif" src="./assets/otters.gif" alt="Jet UI animated gif" />
-      <br>
-      <div class="link">&rarr; <a href="./assets/LoganRoss_Resume.pdf" download="LoganRoss_Resume" target="_blank" rel="noopener noreferrer">resume</a></div>
-      <div class="link">&rarr; <a href="mailto:logan.ross@aol.com" target="_blank" rel="noopener noreferrer">logan.ross@aol.com</a></div>
-      <div class="link">&rarr; <a href="https://github.com/loganjross" target="_blank" rel="noopener noreferrer">github</a></div>
-      <div class="link">&rarr; <a href="https://www.linkedin.com/in/loganjohnross/" target="_blank" rel="noopener noreferrer">linkedin</a></div>
+      <br />
+      <div class="link">
+        &rarr;
+        <a
+          href="./assets/LoganRoss_Resume.pdf"
+          download="LoganRoss_Resume"
+          target="_blank"
+          rel="noopener noreferrer"
+          >resume</a
+        >
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="https://github.com/loganjross"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github</a
+        >
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="https://www.linkedin.com/in/loganjohnross/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >linkedin</a
+        >
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="mailto:logan.ross@aol.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >logan.ross@aol.com</a
+        >
+      </div>
     </entry>
     <entry>
       <div class="flex align-center justify-start">
-        <h2>Jet Protocol</h2>
-        <img src="https://pbs.twimg.com/profile_images/1457722135535890441/QvJgVko3_400x400.jpg" alt="Jet Logo">
+        <h2>Slide</h2>
+        <img
+          src="https://avatars.githubusercontent.com/u/95447297?s=200&v=4"
+          alt="Slide Logo"
+        />
       </div>
-      <h3 class="semi-bold">A DeFi protocol built on the Solana blockchain.</h3>
+      <h3 class="semi-bold">A user-focused, effortless web3 wallet.</h3>
       <span>
-        As the first employee of Jet, I was tasked with creating our user interface. I wanted the product to match our mission within DeFi as a whole—to disrupt the status quo. We've created something not only unique, but also powerful and intuitive to use.
+        I came into Slide with the purpose of cleaning up the frontend codebase
+        and revamping the UI/UX for the embedded wallet widget. We've made an
+        incredibly smooth and easy to use web3 user experience, all available
+        from a simple email-based login.
       </span>
       <span>
-        Considering the end goal of decentralization, we want to ensure the development of the protocol and interface well into the future. This has lead us to create a TypeScript library for easy integration with and use of our on-chain programs, along with a stylesheet package to perpetuate our unique designs.
+        One of the major frictions Slide solves is allowing easy on and off
+        ramping from fiat to cryptocurrencies, as well as the NFT Checkout
+        feature allowing a user to purchase an NFT, direct from a marketplace
+        with their debit/credit card.
       </span>
       <tags class="flex align-start justify-start wrap">
-        <tag>Solana / Blockchain</tag>
-        <tag>web3.js</tag>
-        <tag>React</tag>
-        <tag>Svelte</tag>
+        <tag>Polygon / Blockchain</tag>
+        <tag>ethers.js</tag>
         <tag>TypeScript</tag>
-        <tag>Less</tag>
-        <tag>HTML / CSS</tag>
+        <tag>React</tag>
+        <tag>styled-components</tag>
       </tags>
-      <img class="gif" src="./assets/jet-ui.gif" alt="Jet UI animated gif" />
+      <img
+        class="gif"
+        src="./assets/slide-ui.gif"
+        alt="Slide UI animated gif"
+      />
       <div class="link">
         &rarr;
-        <a href="https://www.jetprotocol.io/" target="_blank" rel="noopener noreferrer">
+        <a href="https://slide.so/" target="_blank" rel="noopener noreferrer">
           website
         </a>
       </div>
       <div class="link">
         &rarr;
-        <a href="https://github.com/jet-lab/jet-v2" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/slide-web3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>
+      </div>
+    </entry>
+    <entry>
+      <div class="flex align-center justify-start">
+        <h2>many.exchange</h2>
+        <img
+          src="https://avatars.githubusercontent.com/u/114311606?s=200&v=4"
+          alt="many.exchange Logo"
+        />
+      </div>
+      <h3 class="semi-bold">A composable UI for the Phoenix DEX on Solana.</h3>
+      <span>
+        After the Solana DeFi ecosystem lost its backbone in the Serum DEX, the
+        community needed not only a new exchange to build upon but the tools and
+        example of how to do so.
+      </span>
+      <span
+        >We built a composable, easy to use swap interface and developer SDK for
+        the Phoenix DEX that provids developers a way to quickly build upon the
+        Phoenix DEX and restore the Solana DeFi ecosystem to a healthier
+        state.</span
+      >
+      <tags class="flex align-start justify-start wrap">
+        <tag>Solana / Blockchain</tag>
+        <tag>web3.js</tag>
+        <tag>TypeScript</tag>
+        <tag>React</tag>
+        <tag>styled-components</tag>
+      </tags>
+      <img
+        class="gif"
+        src="./assets/many-ui.gif"
+        alt="many.exchange UI animated gif"
+      />
+      <div class="link">
+        &rarr;
+        <a
+          href="https://many.exchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          website
+        </a>
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="https://github.com/many-exchange"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           github
         </a>
       </div>
       <div class="link">
         &rarr;
-        <a href="https://jet-antd-resource.pages.dev/" target="_blank" rel="noopener noreferrer">
-          jet-antd styling library
+        <a
+          href="https://twitter.com/many_exchange"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          twitter
+        </a>
+      </div>
+    </entry>
+    <entry>
+      <div class="flex align-center justify-start">
+        <h2>Jet Protocol</h2>
+        <img
+          src="https://pbs.twimg.com/profile_images/1457722135535890441/QvJgVko3_400x400.jpg"
+          alt="Jet Logo"
+        />
+      </div>
+      <h3 class="semi-bold">A DeFi protocol built on the Solana blockchain.</h3>
+      <span>
+        As the first employee of Jet, I was tasked with creating our user
+        interface. I wanted the product to match our mission within DeFi as a
+        whole—to disrupt the status quo. We created something not only unique,
+        but also powerful and intuitive to use.
+      </span>
+      <span>
+        Considering the end goal of decentralization, we wanted to ensure the
+        development of the protocol and interface well into the future. This
+        lead us to create a TypeScript library for easy integration with and use
+        of our on-chain programs, along with a stylesheet package to perpetuate
+        our unique designs.
+      </span>
+      <tags class="flex align-start justify-start wrap">
+        <tag>Solana / Blockchain</tag>
+        <tag>web3.js</tag>
+        <tag>Anchor</tag>
+        <tag>TypeScript</tag>
+        <tag>React</tag>
+        <tag>Svelte</tag>
+      </tags>
+      <img class="gif" src="./assets/jet-ui.gif" alt="Jet UI animated gif" />
+      <div class="link">
+        &rarr;
+        <a
+          href="https://www.jetprotocol.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          website
+        </a>
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="https://github.com/jet-lab/jet-v2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="https://jet-antd-resource.pages.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ui styling library
         </a>
       </div>
     </entry>
