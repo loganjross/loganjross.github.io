@@ -8,17 +8,16 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
       :root {
-        --white: #e4e4e4;
-        --grey: rgba(0, 0, 0, 0.1);
-        --black: #2e3033;
-        --black-2: #46484b;
+        --white: #dcdcdc;
+        --grey: rgba(0, 0, 0, 0.25);
+        --black: #242429;
         --sm-font: 12px;
         --base-font: 14px;
         --lg-font: 16px;
         --spacing-sm: 5px;
         --spacing-base: 10px;
         --spacing-lg: 15px;
-        --shadow: 0px 7px 30px -15px rgba(0, 0, 0, 14);
+        --shadow: 0px 7px 50px -15px rgba(0, 0, 0, 1);
         --transition: 0.1s ease;
       }
       ::-webkit-scrollbar {
@@ -123,7 +122,7 @@
       }
       .name {
         font-size: var(--lg-font);
-        margin-bottom: -15px;
+        margin-bottom: -10px;
       }
       btns {
         height: 40px;
@@ -135,7 +134,7 @@
         color: var(--white);
         font-size: var(--lg-font);
         font-weight: 500;
-        padding: var(--spacing-sm) var(--spacing-lg);
+        padding: var(--spacing-base) var(--spacing-lg);
         margin: var(--spacing-sm);
         border-radius: 50px;
         opacity: 0.8;
@@ -147,10 +146,14 @@
         box-shadow: var(--shadow);
       }
       btn:active {
-        margin-top: calc(var(--spacing-sm) + 1px);
-        margin-bottom: calc(var(--spacing-sm) - 1px);
+        margin-top: calc(var(--spacing-sm) + 2px);
+        margin-bottom: calc(var(--spacing-sm) - 2px);
         opacity: 1;
         box-shadow: var(--shadow);
+      }
+      btn.active {
+        margin-top: calc(var(--spacing-sm) - 2px);
+        margin-bottom: calc(var(--spacing-sm) + 2px);
       }
       entry {
         display: none;
@@ -166,15 +169,13 @@
       entry:first-of-type {
         display: flex;
       }
-      entry img {
+      .entry-icon {
         width: 25px;
         height: 25px;
         border-radius: 6px;
         margin-left: var(--spacing-sm);
       }
       entry .gif {
-        height: 350px;
-        width: auto;
         position: absolute;
         top: 0;
         right: -575px;
@@ -257,12 +258,13 @@
   <body>
     <section class="flex align-start justify-center column">
       <span class="name semi-bold">logan ross</span>
-      <h1>a web3 dev</h1>
+      <h1>a full stack dev</h1>
       <div class="flex align-center justify-start wrap">
         <btn class="active">about</btn>
+        <!--btn>Many Exchange</btn-->
         <btn>Slide</btn>
-        <btn>many.exchange</btn>
         <btn>Jet Protocol</btn>
+        <btn>Dealr</btn>
       </div>
     </section>
     <entry>
@@ -270,15 +272,20 @@
       <h3 class="semi-bold">buffalo / brooklyn, ny</h3>
       <span>
         After my van broke down for the fourth time in a row (being a musician just wasn’t
-        paying that well, go figure) I decided to teach myself programming. Two years later, I
-        became deeply interested in the blockchain and DeFi space, learning everything I could
-        and becoming a high level web3 developer.
+        paying that well, go figure) I decided to teach myself programming. Over the next few years 
+        I worked in both web2 and web3, learning everything I could fit into my head along the way and becoming a high-level full stack developer.
         <br>
         <br>
         A self-starter, I value forward momentum, fast progress, innovation, and working on cool
         projects that I believe in.
       </span>
-      <img class="gif" src="./assets/otters.gif" alt="Jet UI animated gif" />
+      <img 
+        class="gif" 
+        width="525px" 
+        height="auto" 
+        src="./assets/otters.gif" 
+        alt="Nylon Otters animated gif" 
+      />
       <br />
       <div class="link">
         &rarr;
@@ -318,60 +325,11 @@
         >
       </div>
     </entry>
-    <entry>
+    <!--entry>
       <div class="flex align-center justify-start">
-        <h2>Slide</h2>
+        <h2>Many Exchange</h2>
         <img
-          src="https://avatars.githubusercontent.com/u/95447297?s=200&v=4"
-          alt="Slide Logo"
-        />
-      </div>
-      <h3 class="semi-bold">A user-focused, effortless web3 wallet.</h3>
-      <span>
-        I came into Slide with the purpose of cleaning up the frontend codebase
-        and revamping the UI/UX for the embedded wallet widget. We've made an
-        incredibly smooth and easy to use web3 user experience, all available
-        from a simple email-based login.
-      </span>
-      <span>
-        One of the major frictions Slide solves is allowing easy on and off
-        ramping from fiat to cryptocurrencies, as well as the NFT Checkout
-        feature allowing a user to purchase an NFT, direct from a marketplace
-        with their debit/credit card.
-      </span>
-      <tags class="flex align-start justify-start wrap">
-        <tag>Polygon / Blockchain</tag>
-        <tag>ethers.js</tag>
-        <tag>TypeScript</tag>
-        <tag>React</tag>
-        <tag>styled-components</tag>
-      </tags>
-      <img
-        class="gif"
-        src="./assets/slide-ui.gif"
-        alt="Slide UI animated gif"
-      />
-      <div class="link">
-        &rarr;
-        <a href="https://slide.so/" target="_blank" rel="noopener noreferrer">
-          website
-        </a>
-      </div>
-      <div class="link">
-        &rarr;
-        <a
-          href="https://github.com/slide-web3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github
-        </a>
-      </div>
-    </entry>
-    <entry>
-      <div class="flex align-center justify-start">
-        <h2>many.exchange</h2>
-        <img
+          class="entry-icon"
           src="https://avatars.githubusercontent.com/u/114311606?s=200&v=4"
           alt="many.exchange Logo"
         />
@@ -397,6 +355,8 @@
       </tags>
       <img
         class="gif"
+        width="550px"
+        height="auto"
         src="./assets/many-ui.gif"
         alt="many.exchange UI animated gif"
       />
@@ -430,11 +390,65 @@
           twitter
         </a>
       </div>
+    </entry-->
+    <entry>
+      <div class="flex align-center justify-start">
+        <h2>Slide</h2>
+        <img
+          class="entry-icon"
+          src="https://avatars.githubusercontent.com/u/95447297?s=200&v=4"
+          alt="Slide Logo"
+        />
+      </div>
+      <h3 class="semi-bold">A user-focused, effortless web3 wallet.</h3>
+      <span>
+        I came into Slide with the purpose of cleaning up the frontend codebase
+        and revamping the UI/UX for the embedded wallet widget. We've made an
+        incredibly smooth and easy to use web3 user experience, all available
+        from a simple email-based login.
+      </span>
+      <span>
+        One of the major frictions Slide solves is allowing easy on and off
+        ramping from fiat to cryptocurrencies, as well as the NFT Checkout
+        feature allowing a user to purchase an NFT, direct from a marketplace
+        with their debit/credit card.
+      </span>
+      <tags class="flex align-start justify-start wrap">
+        <tag>Polygon / Blockchain</tag>
+        <tag>ethers.js</tag>
+        <tag>TypeScript</tag>
+        <tag>React</tag>
+        <tag>styled-components</tag>
+      </tags>
+      <img
+        class="gif"
+        width="550px"
+        height="auto"
+        src="./assets/slide-ui.gif"
+        alt="Slide UI animated gif"
+      />
+      <div class="link">
+        &rarr;
+        <a href="https://slide.so/" target="_blank" rel="noopener noreferrer">
+          website
+        </a>
+      </div>
+      <div class="link">
+        &rarr;
+        <a
+          href="https://github.com/slide-web3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>
+      </div>
     </entry>
     <entry>
       <div class="flex align-center justify-start">
         <h2>Jet Protocol</h2>
         <img
+          class="entry-icon"
           src="https://pbs.twimg.com/profile_images/1457722135535890441/QvJgVko3_400x400.jpg"
           alt="Jet Logo"
         />
@@ -461,7 +475,13 @@
         <tag>React</tag>
         <tag>Svelte</tag>
       </tags>
-      <img class="gif" src="./assets/jet-ui.gif" alt="Jet UI animated gif" />
+      <img 
+        class="gif"
+        width="550px"
+        height="auto"
+        src="./assets/jet-ui.gif" 
+        alt="Jet UI animated gif" 
+      />
       <div class="link">
         &rarr;
         <a
@@ -490,6 +510,51 @@
           rel="noopener noreferrer"
         >
           ui styling library
+        </a>
+      </div>
+    </entry>
+    <entry>
+      <div class="flex align-center justify-start">
+        <h2>Dealr</h2>
+        <img
+          class="entry-icon"
+          src="https://media.licdn.com/dms/image/C4E0BAQGHcDciPW4WWw/company-logo_200_200/0/1567712011663?e=2147483647&v=beta&t=1ctmAMIZ7Hy3Z9Kpb_3XMVNlXL5MfaPWsyvaIn1flr8"
+          alt="Dealr Logo"
+        />
+      </div>
+      <h3 class="semi-bold">A DeFi protocol built on the Solana blockchain.</h3>
+      <span>
+        Dealr is an app that makes the day to day lives of independent car dealers a heck of a lot easier. 
+        It's a CRM, a marketing tool, and a sales tool all in one. It's a one stop shop for all of your car dealer needs.
+      </span>
+      <span>
+        This was my first programming job, starting as a junior developer and cutting my teeth on things outside my normal scope such as PHP and MySQL databases. 
+        I solved bugs, introduced new features and worked on a widely varying tech stack, all while learning a lot about the car industry.
+      </span>
+      <tags class="flex align-start justify-start wrap">
+        <tag>JavaScript</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>React</tag>
+        <tag>Twig</tag>
+        <tag>PHP</tag>
+        <tag>MySQL</tag>
+      </tags>
+      <img 
+        class="gif"
+        width="550px" 
+        height="auto" 
+        src="./assets/dealr-ui.gif" 
+        alt="Dealr UI animated gif" 
+      />
+      <div class="link">
+        &rarr;
+        <a
+          href="https://dealr.cloud/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          website
         </a>
       </div>
     </entry>
