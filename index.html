@@ -1,123 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="Logan Ross is a musician and turnkey dev."
-		/>
-		<title>Logan Ross</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<script src="script.js" defer></script>
-	</head>
-	<body>
-		<img
-			class="bg-img"
-			src="./assets/playing-music.gif"
-			alt=".gif of me playing music"
-		/>
-		<section id="home" class="flex-centered">
-			<div class="flex-centered column">
-				<code>&lt;&gt;</code>
-				<h1>Logan Ross</h1>
-				<p>I write music, I write code.</p>
-				<code>&lt;/&gt;</code>
-			</div>
-		</section>
-		<section id="about" class="flex-centered">
-			<div class="flex column">
-				<code>&lt;about&gt;</code>
-				<p>
-					After my van broke down for the fourth time in a row, I
-					realized that being in a band just wasn't paying the bills.
-					That day I decided to teach myself programming. I quickly
-					found that I had a natural ability to learn at a high level,
-					a real knack for software, and an immense passion for
-					computing.
-				</p>
-				<br />
-				<p>
-					At this stage in my career, I'm able to beautifully and
-					expertly architect user interfaces at the highest level. I
-					can design, develop and ship at the product level. I've
-					worked in web2 and pushed the boundaries of web3, led teams,
-					and designed products from their inception.
-				</p>
-				<br />
-				<p>
-					I'm attracted to projects that move the needle forward, help
-					people in some way, and are just plain cool ideas.
-				</p>
-				<code>&lt;/about&gt;</code>
-			</div>
-		</section>
-		<section id="projects" class="flex-centered">
-			<section class="project-info flex align-center justify-end">
-				<div class="flex column">
-					<code>&lt;project&gt;</code>
-					<h2></h2>
-					<a target="_blank" rel="noopener noreferrer"></a>
-					<i></i>
-					<p></p>
-					<div class="flex align-center tech-stack">
-						<div class="typescript flex align-end justify-end">
-							TS
-						</div>
-						<span><i class="fa-brands fa-react"></i></span>
-						<span><i class="fa-brands fa-node"></i></span>
-						<div class="unique-tech-stack flex align-center"></div>
-					</div>
-					<code>&lt;/project&gt;</code>
-				</div>
-			</section>
-			<section class="project-visuals flex align-center justify-start">
-				<div class="laptop-container">
-					<img
-						width="100%"
-						src="./assets/laptop-mock.png"
-						alt="Laptop"
-					/>
-					<div class="screen-container flex-centered">
-						<img src="" alt="Project .gif" />
-					</div>
-				</div>
-			</section>
-		</section>
-		<nav class="flex align-end justify-between">
-			<div class="nav-links">
-				<a href="#home">&lt;/&gt;</a>
-				<a href="#about">about</a>
-				<a href="#projects">projects</a>
-				<span class="project-buttons hidden">
-					<a data-project-index="0">Phoenix</a>
-					<a data-project-index="1">Slide</a>
-					<a data-project-index="2">Jet Protocol</a>
-					<a data-project-index="3">Dealr</a>
-				</span>
-			</div>
-			<div class="nav-contact">
-				<a href="mailto:lognross@gmail.com">lognross@gmail.com</a>
-				<div class="nav-contact-socials">
-					<a href="https://github.com/loganjross" target="_blank">
-						<i class="fab fa-github"></i>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/loganjohnross/"
-						target="_blank"
-					>
-						<i class="fab fa-linkedin"></i>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logan Ross</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- <img
+      class="bg-img"
+      src="./assets/playing-music.gif"
+      alt=".gif of me playing music"
+    /> -->
+    <section id="home" class="flex-centered">
+      <div class="flex-centered column">
+        <code>&lt;&gt;</code>
+        <h1>Logan Ross</h1>
+        <i>A turnkey frontend dev.</i>
+        <code>&lt;/&gt;</code>
+      </div>
+    </section>
+    <section id="about" class="flex-centered">
+      <div class="flex column">
+        <code>&lt;about&gt;</code>
+        <p>
+          After my van broke down for the fourth time in a row, I realized that
+          being in a band just wasn't paying the bills. That day I decided to
+          teach myself programming. I quickly found that I had a natural ability
+          to learn at a high level, a real knack for software, and an immense
+          passion for computing.
+        </p>
+        <br />
+        <p>
+          At this stage in my career, I'm able to beautifully and expertly
+          architect user interfaces at the highest level. I can design, develop
+          and ship at the product level. I've worked in web2 and pushed the
+          boundaries of web3, led teams, and designed products from their
+          inception.
+        </p>
+        <br />
+        <p>
+          I'm attracted to projects that move the needle forward, help people in
+          some way, and are just plain cool ideas.
+        </p>
+        <code>&lt;/about&gt;</code>
+      </div>
+    </section>
+    <section id="projects" class="flex-centered">
+      <section class="project-info flex align-center justify-end">
+        <div class="flex column">
+          <code>&lt;project&gt;</code>
+          <h2></h2>
+          <a target="_blank" rel="noopener noreferrer"></a>
+          <i></i>
+          <p></p>
+          <div class="flex align-center tech-stack">
+            <div class="typescript flex align-end justify-end">TS</div>
+            <span><i class="fa-brands fa-react"></i></span>
+            <span><i class="fa-brands fa-node"></i></span>
+            <div class="unique-tech-stack flex align-center"></div>
+          </div>
+          <code>&lt;/project&gt;</code>
+        </div>
+      </section>
+      <section class="project-visuals flex align-center justify-start">
+        <div class="laptop-container">
+          <img width="100%" src="./assets/laptop-mock.png" alt="Laptop" />
+          <div class="screen-container flex-centered">
+            <img src="" alt="Project .gif" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <nav class="flex align-end justify-between">
+      <div class="nav-links">
+        <a href="#home">&lt;/&gt;</a>
+        <a href="#about">&lt;about /&gt;</a>
+        <a href="#projects">&lt;projects /&gt;</a>
+        <span class="project-buttons hidden">
+          <a data-project-index="0">Phoenix</a>
+          <a data-project-index="1">Slide</a>
+          <a data-project-index="2">Jet Protocol</a>
+          <a data-project-index="3">Dealr</a>
+        </span>
+      </div>
+      <div class="nav-contact">
+        <a href="mailto:lognross@gmail.com">lognross@gmail.com</a>
+        <div class="nav-contact-socials">
+          <a href="https://github.com/loganjross" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/loganjohnross/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </body>
 </html>

@@ -106,12 +106,12 @@ function handleNavigation() {
     navLinks[0].classList.add('active');
   }
 
-  const bgImg = document.querySelector('.bg-img');
-  if (!window.location.hash || window.location.hash === '#home') {
-    bgImg.classList.remove('blur');
-  } else {
-    bgImg.classList.add('blur');
-  }
+  // const bgImg = document.querySelector('.bg-img');
+  // if (!window.location.hash || window.location.hash === '#home') {
+  //   bgImg.classList.remove('blur');
+  // } else {
+  //   bgImg.classList.add('blur');
+  // }
 
   if (!isInit) isInit = true;
 }

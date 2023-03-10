@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  --base: #242429;
-  --text: #fff9f9;
+  --base: #141414;
+  --text: #ffffff;
   --accent: #c9c9c9;
-  --contrast: rgba(255, 255, 255, 0.3);
+  --contrast: rgba(200, 200, 200, 0.25);
   --fontSize: 17px;
   --spacing: 8px;
   --shadow: 0px 7px 25px -15px rgba(0, 0, 0, 1);
@@ -21,10 +21,26 @@ body {
   height: 100vh;
   margin: 0;
   color: var(--text);
-  background: var(--base);
+  background: linear-gradient(-45deg, #202020, #292929, #343434);
+	background-size: 400% 400%;
   font-size: var(--fontSize);
   font-family: "Outfit", sans-serif;
   overflow: hidden;
+	animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+    backdrop-filter: blur(0px);
+	}
+	50% {
+		background-position: 100% 50%;
+    backdrop-filter: blur(1000px);
+	}
+	100% {
+		background-position: 0% 50%;
+    backdrop-filter: blur(0px);
+	}
 }
 h1,
 h2,
@@ -114,7 +130,7 @@ nav {
 }
 nav div {
   padding-bottom: calc(var(--spacing) / 2);
-  border-bottom: 1px solid var(--contrast);
+  border-bottom: 1px dotted var(--contrast);
 }
 nav a:hover {
   color: var(--text);
@@ -173,6 +189,7 @@ section {
   opacity: 0;
   transition: opacity var(--transition);
   pointer-events: none;
+  z-index: -1000;
 }
 section code {
   margin-bottom: calc(var(--spacing) + 20px);
@@ -185,6 +202,7 @@ section code:last-of-type {
 section.active {
   opacity: 1;
   pointer-events: all;
+  z-index: 0;
 }
 section.active code {
   margin-top: var(--spacing);
