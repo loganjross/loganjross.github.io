@@ -137,7 +137,7 @@ nav a:hover {
 }
 nav .nav-links  {
   position: relative;
-  margin-bottom: 4vw;
+  margin-bottom: 2vw;
   padding-left: 15vw;
 }
 nav .nav-links a {
@@ -349,16 +349,8 @@ section.active code {
 }
 
 @media screen and (max-width: 1440px) {
-  #projects {
-    flex-direction: column;
-  }
-  #projects .project-info,
   #projects .project-visuals {
-    width: 100%;
-    height: unset;
-    align-items: flex-start;
-    justify-content: center;
-    padding: var(--spacing) 0;
+    display: none;
   }
 }
 @media screen and (max-width: 775px) {
