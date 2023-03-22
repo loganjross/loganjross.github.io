@@ -349,6 +349,12 @@ section.active code {
 }
 
 @media screen and (max-width: 1440px) {
+  #projects .project-info {
+    justify-content: center;
+  }
+  #projects .project-info {
+    width: 100%;
+  }
   #projects .project-visuals {
     display: none;
   }
