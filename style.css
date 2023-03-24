@@ -241,7 +241,7 @@ section.active code {
 #projects .project-info, 
 #projects .project-visuals {
   position: relative;
-  width: 40%;
+  width: 42%;
   height: 100vh;
   margin-top: 30px;
   opacity: 0;
@@ -249,7 +249,7 @@ section.active code {
   pointer-events: all;
 }
 #projects .project-visuals {
-  width: 60%;
+  width: 58%;
   margin-top: 40px;
   transition-delay: 0.1s;
 }
@@ -335,7 +335,7 @@ section.active code {
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
   #projects .project-info {
     justify-content: center;
   }
