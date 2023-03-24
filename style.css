@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --base: #141414;
-  --text: #ffffff;
+  --text: #f0f0f0;
   --accent: #c9c9c9;
   --contrast: rgba(200, 200, 200, 0.25);
-  --fontSize: 17px;
+  --font-size: 17px;
   --spacing: 8px;
   --shadow: 0px 7px 25px -15px rgba(0, 0, 0, 1);
   --transition: 0.35s ease-out;
@@ -21,10 +20,10 @@ body {
   height: 100vh;
   margin: 0;
   color: var(--text);
-  background: linear-gradient(-45deg, #202020, #292929, #343434);
-	background-size: 400% 400%;
-  font-size: var(--fontSize);
-  font-family: "Outfit", sans-serif;
+  background: linear-gradient(-45deg, #090909, #141414, #191919);
+	background-size: 150% 150%;
+  font-size: var(--font-size);
+  font-family: "Mulish", sans-serif;
   overflow: hidden;
 	animation: gradient 10s ease infinite;
 }
@@ -52,14 +51,22 @@ a {
 }
 a {
   color: inherit;
+}
+a {
+  color: var(--accent);
+  opacity: 0.75;
   text-decoration: none;
 }
+a.active, a:hover {
+  color: var(--text);
+  opacity: 1;
+}
 h1 {
-  font-size: calc(var(--fontSize) * 2);
+  font-size: calc(var(--font-size) * 2);
 }
 h2 {
-  font-size: calc(var(--fontSize) * 3);
-  line-height: calc(var(--fontSize) * 3);
+  font-size: calc(var(--font-size) * 3);
+  line-height: calc(var(--font-size) * 3);
 }
 code {
   margin: var(--spacing) 0;
@@ -124,12 +131,12 @@ code {
 }
 nav {
   position: fixed;
-  bottom: 5vw;
+  bottom: 10vh;
   left: 0;
   width: 100%;
 }
 nav div {
-  padding-bottom: calc(var(--spacing) / 2);
+  padding-bottom: var(--spacing);
   border-bottom: 1px dotted var(--contrast);
 }
 nav a:hover {
@@ -137,32 +144,10 @@ nav a:hover {
 }
 nav .nav-links  {
   position: relative;
-  margin-bottom: 2vw;
   padding-left: 15vw;
 }
 nav .nav-links a {
   margin-left: calc(var(--spacing) * 2);
-  color: var(--accent);
-  opacity: 0.75;
-}
-nav .nav-links a.active {
-  color: var(--text);
-  opacity: 1;
-}
-nav .nav-contact {
-  position: relative;
-  padding-left: 0;
-  padding-right: 18vw;
-  color: var(--accent);
-}
-nav .nav-contact .nav-contact-socials {
-  position: absolute;
-  bottom: -32px;
-  left: 0;
-  border: unset;
-}
-nav .nav-contact .nav-contact-socials a {
-  margin-right: var(--spacing);
 }
 nav .project-buttons {
   position: absolute;
@@ -215,21 +200,23 @@ section.active code {
   transition: all var(--transition);
 }
 #home div p {
-  margin-bottom: calc(var(--spacing) / 2);
-  padding-top: calc(var(--spacing) / 2);
   white-space: nowrap;
-  transition: all var(--transition);
+  opacity: 0.75;
 }
 #home div code {
   align-self: flex-start;
+}
+#home .socials {
+  width: 100%;
+  margin-top: calc(var(--spacing) * 2);
+}
+#home .socials a {
+  margin-right: calc(var(--spacing) * 1.5);
 }
 #home.active div {
   height: auto;
   margin-top: 0;
   opacity: 1;
-}
-#home.active div p {
-  padding-top: 0;
 }
 #about div {
   width: 85%;
@@ -254,7 +241,7 @@ section.active code {
 #projects .project-info, 
 #projects .project-visuals {
   position: relative;
-  width: 45%;
+  width: 40%;
   height: 100vh;
   margin-top: 30px;
   opacity: 0;
@@ -262,7 +249,7 @@ section.active code {
   pointer-events: all;
 }
 #projects .project-visuals {
-  width: 55%;
+  width: 60%;
   margin-top: 40px;
   transition-delay: 0.1s;
 }
@@ -305,13 +292,13 @@ section.active code {
   height: 20px;
   border: 2px solid var(--accent);
   color: var(--text);
-  font-size: calc(var(--fontSize) / 1.5);
+  font-size: calc(var(--font-size) / 1.5);
   font-weight: bold;
 }
 #projects .project-info a {
   margin-top: var(--spacing);
   text-decoration: underline;
-  opacity: 0.7;
+  opacity: 0.75;
   cursor: pointer;
 }
 #projects .project-info a:hover {
@@ -348,7 +335,7 @@ section.active code {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1250px) {
   #projects .project-info {
     justify-content: center;
   }
@@ -366,12 +353,7 @@ section.active code {
   }
   nav .nav-links {
     align-self: flex-start;
-    margin-bottom: calc(var(--spacing) * 6);
     padding-left: var(--spacing);
-  }
-  nav .nav-contact {
-    align-self: flex-end;
-    padding-right: var(--spacing);
   }
   nav .project-buttons {
     width: 100vw;
