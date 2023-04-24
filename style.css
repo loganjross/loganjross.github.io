@@ -131,7 +131,7 @@ code {
 }
 nav {
   position: fixed;
-  bottom: 10vh;
+  top: 10vh;
   left: 0;
   width: 100%;
 }
@@ -153,6 +153,7 @@ nav .project-buttons {
   position: absolute;
   bottom: -32px;
   right: 0;
+  white-space: nowrap;
   transition: all var(--transition);
 }
 nav .project-buttons.hidden {
@@ -195,23 +196,27 @@ section.active code {
   opacity: 1;
 }
 #home div {
+  width: 90%;
+  max-width: 400px;
   margin-top: 30px;
   opacity: 0;
   transition: all var(--transition);
 }
 #home div p {
-  white-space: nowrap;
   opacity: 0.75;
 }
 #home div code {
   align-self: flex-start;
 }
+#home .bio {
+  margin: calc(var(--spacing) * 3) 0;
+  font-style: italic;
+}
 #home .socials {
   width: 100%;
-  margin-top: calc(var(--spacing) * 2);
 }
 #home .socials a {
-  margin-right: calc(var(--spacing) * 1.5);
+  margin-right: calc(var(--spacing) * 2);
 }
 #home.active div {
   height: auto;
@@ -348,7 +353,8 @@ section.active code {
 }
 @media screen and (max-width: 775px) {
   nav {
-    bottom: calc(var(--spacing) * 5);
+    top: unset;
+    bottom: calc(var(--spacing) * 8);
     flex-direction: column;
   }
   nav .nav-links {
@@ -365,7 +371,7 @@ section.active code {
     align-items: flex-start !important;
   }
   #home {
-    align-items: center !important;
+    padding-left: var(--spacing);
   }
   #projects {
     justify-content: flex-start;
